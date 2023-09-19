@@ -1,0 +1,9 @@
+.container{
+    height: 350px;
+    background: white;
+    padding: 20px;
+}
+
+li{
+    cursor: pointer;
+}

@@ -1,0 +1,38 @@
+<div class="container  mt-5">
+    <form [formGroup]="loginForm">
+        <div class="card w-50 p-5 m-auto">
+            <div  [ngClass]="user.length==1 ? 'alert alert-success':'alert alert-danger' "  *ngIf="sharedService.message">
+                {{sharedService.message}}
+            </div>
+            <h3 class="mx-3 text-center">Login </h3>
+            <div class="card-body ">
+                <div class="">                    
+                    <div class="form-group mt-2">
+                        <input type="email" name="email" id="email" placeholder="email" class="form-control"
+                            formControlName="email">
+                        <div *ngIf="invalidFeild('email')">
+                            <div *ngIf="feildError('email',getValidations.REQUIRED)" class="text-danger fs-14">
+                                {{getValidations.EMAIL_REQUIRED}}
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="form-group mt-2">
+                        <input type="password" name="password" id="password" placeholder="password" class="form-control"
+                            formControlName="password">
+                        <div *ngIf="invalidFeild('password')">
+                            <div *ngIf="feildError('password',getValidations.REQUIRED)" class="text-danger fs-14">
+                                {{getValidations.PASSWORD_REQUIRED}}
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="form-group mt-2">
+                        <button type="submit" class="btn btn-primary w-100" [disabled]="loginForm.invalid"
+                            (click)="login()">Login</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

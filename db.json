@@ -1,0 +1,79 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "sai",
+      "email": "sai@gmail.com",
+      "mobileNumber": 9900990011,
+      "password": "AB@123"
+    },
+    {
+      "email": "kholi@gmail.com",
+      "mobileNumber": 9909990099,
+      "id": 2
+    },
+    {
+      "username": "rohit",
+      "email": "sharma",
+      "password": "rohit@12345",
+      "mobileNumber": 8888818811,
+      "id": 3
+    },
+    {
+      "username": "sai",
+      "email": "rajesh",
+      "password": "sairajesh",
+      "mobileNumber": 9919991111,
+      "id": 4
+    },
+    {
+      "username": "sai",
+      "email": "kumar",
+      "password": "saikumar123",
+      "mobileNumber": 9900990099,
+      "id": 5
+    },
+    {
+      "username": "sai",
+      "email": "kumar",
+      "password": "saikumar123",
+      "mobileNumber": 9900990099,
+      "id": 6
+    },
+    {
+      "username": "nariane",
+      "email": "",
+      "password": "",
+      "mobileNumber": "",
+      "id": 7
+    },
+    {
+      "username": "sai",
+      "email": "kumar",
+      "password": "saikumar@123",
+      "mobileNumber": 9900011112,
+      "id": 8
+    },
+    {
+      "username": "sgupta",
+      "email": "john@gmail.com",
+      "password": "1234",
+      "mobileNumber": 9900990099,
+      "id": 9
+    },
+    {
+      "username": "kiran",
+      "email": "kiran@gmail.com",
+      "password": "As01224",
+      "mobileNumber": 9900990099,
+      "id": 10
+    },
+    {
+      "username": "sai",
+      "email": "sai@gmail.com",
+      "password": "sai",
+      "mobileNumber": 91111111111,
+      "id": 11
+    }
+  ]
+}
