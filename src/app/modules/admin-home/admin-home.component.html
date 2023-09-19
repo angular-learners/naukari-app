@@ -1,1 +1,15 @@
-<p>admin-home works!</p>
+<div class="container-fluid mt-5">
+    <div class="row">
+        <div class="col-md-2">
+               <ul class="list-group">
+                    <li class="list-group-item"><a class="nav-link" routerLink="add-edit-jobs">Add/Edit Jobs</a></li>
+                    <li class="list-group-item"><a class="nav-link" routerLink="view-jobs">View Jobs</a></li>
+                    <!-- <li class="list-group-item"><a class="nav-link" href="">Favourites</a></li>
+                    <li class="list-group-item"><a class="nav-link" routerLink="settings">Settings</a></li> -->
+               </ul>
+        </div>
+        <div class="col-md-10">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>

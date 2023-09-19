@@ -10,7 +10,6 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class ProfileComponent implements OnInit {
   userDetails!: any;
-  counter:number=0;
   profileForm!: FormGroup;
   userId!: number;
   hideInputs: boolean = false;
@@ -18,47 +17,61 @@ export class ProfileComponent implements OnInit {
 
   }
   ngOnInit(): void {
-    this.getlocalStorageData();
     this.onInitProfileForm();
+    this.getlocalStorageData();
+    this.getUser();
+  
   }
 
   onInitProfileForm() {
     this.profileForm = new FormGroup({
+      'username':new FormControl(''),
       'email': new FormControl(''),
+      'password':new FormControl(''),
       'mobileNumber': new FormControl('')
     })
   }
 
+  getUser() {
+    this.userService.getUserById(this.userId).subscribe(
+      {
+        next: (res: any) => {
+          this.userDetails=res;
+           console.log(res);
+        },
+        error: (err: any) => {
+          console.log(err);
+        }
+      }
+    )
+  }
+
   getlocalStorageData() {
-    this.userDetails = JSON.parse(localStorage.getItem('user') as any);
-    this.userId = this.userDetails[0].id;
+    const user= JSON.parse(localStorage.getItem('user') as any);
+    this.userId = user[0].id;
+  }
+  enableInputs(){
+      this.hideInputs=true;
+      this.profileForm.patchValue({
+        'username':this.userDetails?.username,
+        'email': this.userDetails?.email,
+        'password':this.userDetails?.password,
+        'mobileNumber': this.userDetails?.mobileNumber
+      })
   }
 
   updateProfile() {
-    this.counter=this.counter+1
-    this.hideInputs = true;
-    if(this.counter==1){
-      this.profileForm.patchValue({
-        'email': this.userDetails[0].email,
-        'mobileNumber': this.userDetails[0].mobileNumber
-      })
-    }
-    console.log(this.profileForm.value);
-    if(this.counter>=2){
+    this.hideInputs = false;
       this.userService.updateUserById(this.userId, this.profileForm.value).subscribe(
         {
           next: (res: any) => {
             console.log(res);
-            
-             this.userDetails=[{email:res.email,mobileNumber:res.mobileNumber}];
-             this.hideInputs=false;
+            this.getUser();
           },
           error: (err: any) => {
             console.log(err);
           }
         }
       )
-    }
-   
   }
 }

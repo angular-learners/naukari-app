@@ -5,11 +5,15 @@
       "username": "sai",
       "email": "sai@gmail.com",
       "mobileNumber": 9900990011,
-      "password": "AB@123"
+      "password": "AB@123",
+      "role":"USER"
     },
     {
+      "username": "kholi",
       "email": "kholi@gmail.com",
       "mobileNumber": 9909990099,
+      "password":"1234",
+      "role":"ADMIN",
       "id": 2
     },
     {
@@ -17,13 +21,15 @@
       "email": "sharma",
       "password": "rohit@12345",
       "mobileNumber": 8888818811,
+      "role":"USER",
       "id": 3
     },
     {
       "username": "sai",
-      "email": "rajesh",
+      "email": "saikiran@gmail.com",
       "password": "sairajesh",
-      "mobileNumber": 9919991111,
+      "mobileNumber": 8819992222,
+      "role":"USER",
       "id": 4
     },
     {
@@ -31,6 +37,7 @@
       "email": "kumar",
       "password": "saikumar123",
       "mobileNumber": 9900990099,
+      "role":"USER",
       "id": 5
     },
     {
@@ -38,6 +45,7 @@
       "email": "kumar",
       "password": "saikumar123",
       "mobileNumber": 9900990099,
+      "role":"USER",
       "id": 6
     },
     {
@@ -45,6 +53,7 @@
       "email": "",
       "password": "",
       "mobileNumber": "",
+      "role":"USER",
       "id": 7
     },
     {
@@ -52,6 +61,7 @@
       "email": "kumar",
       "password": "saikumar@123",
       "mobileNumber": 9900011112,
+      "role":"USER",
       "id": 8
     },
     {
@@ -59,6 +69,7 @@
       "email": "john@gmail.com",
       "password": "1234",
       "mobileNumber": 9900990099,
+      "role":"USER",
       "id": 9
     },
     {
@@ -66,6 +77,7 @@
       "email": "kiran@gmail.com",
       "password": "As01224",
       "mobileNumber": 9900990099,
+      "role":"USER",
       "id": 10
     },
     {
@@ -73,6 +85,7 @@
       "email": "sai@gmail.com",
       "password": "sai",
       "mobileNumber": 91111111111,
+      "role":"USER",
       "id": 11
     }
   ]

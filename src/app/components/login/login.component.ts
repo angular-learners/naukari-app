@@ -13,14 +13,14 @@ import { SharedService } from 'src/app/services/shared.service';
 })
 export class LoginComponent implements OnInit {
   loginForm!: FormGroup;
-  user:User[]=[];
-  usersList:User[]=[];
+  user: any[] = [];
+  usersList: User[] = [];
 
 
   constructor(private fb: FormBuilder,
-    private userService:UserService,
-    public sharedService:SharedService,
-    private router:Router) {
+    private userService: UserService,
+    public sharedService: SharedService,
+    private router: Router) {
 
   }
   ngOnInit(): void {
@@ -51,34 +51,35 @@ export class LoginComponent implements OnInit {
     return NaukariConstants;
   }
 
-  getAllUsers(){
-     this.userService.getAllUsers().subscribe(
-      {next:(res:any)=>{
-        console.log(res);
-        this.usersList=[...res];
-      },
-      error:(err:any)=>{
-        console.log(err);
-      }   
-     }
-     )
+  getAllUsers() {
+    this.userService.getAllUsers().subscribe(
+      {
+        next: (res: any) => {
+          console.log(res);
+          this.usersList = [...res];
+        },
+        error: (err: any) => {
+          console.log(err);
+        }
+      }
+    )
   }
 
-  login() { 
-    this.user=this.usersList.filter((user:any)=>{
-        const {email,password}=user;
-          if(email===this.loginForm.get('email')?.value && password===this.loginForm.get('password')?.value){
-            return user;
-          }
-      });
-  //  (this.user.length==1) ? this.sharedService.message=NaukariConstants.LOGIN_SUCCESS:this.sharedService.message=NaukariConstants.LOGIN_FAILURE;
-     if(this.user.length==1){
-      this.sharedService.message=NaukariConstants.LOGIN_SUCCESS;
-      this.router.navigate(['user-home']);
-      localStorage.setItem('user',JSON.stringify(this.user))
-     } else{
-      this.sharedService.message=NaukariConstants.LOGIN_FAILURE;
-     }
- 
-}
+  login() {
+    this.user = this.usersList.filter((user: any) => {
+      const { email, password } = user;
+      if (email === this.loginForm.get('email')?.value && password === this.loginForm.get('password')?.value) {
+        return user;
+      }
+    });
+    //  (this.user.length==1) ? this.sharedService.message=NaukariConstants.LOGIN_SUCCESS:this.sharedService.message=NaukariConstants.LOGIN_FAILURE;
+    if (this.user.length == 1) {
+      this.sharedService.message = NaukariConstants.LOGIN_SUCCESS;
+      localStorage.setItem('user', JSON.stringify(this.user));
+      this.user[0].role == 'ADMIN' ? this.router.navigate(['admin-home']) : this.router.navigate(['user-home']);
+    } else {
+      this.sharedService.message = NaukariConstants.LOGIN_FAILURE;
+    }
+
+  }
 }

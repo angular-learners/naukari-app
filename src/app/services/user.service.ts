@@ -18,6 +18,7 @@ export class UserService {
   getAllUsers(): Observable<any> {
     return this.http.get(this.BASE_URL); /*  SELECT * FROM USERS    */
   }
+  
   getUserById(id: number): Observable<any> {
     /* SELECT * FROM USERS WHERE USER ID=? */
     return this.http.get(`${this.BASE_URL}/${id}`);
