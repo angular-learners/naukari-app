@@ -6,14 +6,14 @@
       "email": "sai@gmail.com",
       "mobileNumber": 9900990011,
       "password": "AB@123",
-      "role":"USER"
+      "role": "USER"
     },
     {
       "username": "kholi",
       "email": "kholi@gmail.com",
       "mobileNumber": 9909990099,
-      "password":"1234",
-      "role":"ADMIN",
+      "password": "1234",
+      "role": "ADMIN",
       "id": 2
     },
     {
@@ -21,7 +21,7 @@
       "email": "sharma",
       "password": "rohit@12345",
       "mobileNumber": 8888818811,
-      "role":"USER",
+      "role": "USER",
       "id": 3
     },
     {
@@ -29,7 +29,7 @@
       "email": "saikiran@gmail.com",
       "password": "sairajesh",
       "mobileNumber": 8819992222,
-      "role":"USER",
+      "role": "USER",
       "id": 4
     },
     {
@@ -37,7 +37,7 @@
       "email": "kumar",
       "password": "saikumar123",
       "mobileNumber": 9900990099,
-      "role":"USER",
+      "role": "USER",
       "id": 5
     },
     {
@@ -45,7 +45,7 @@
       "email": "kumar",
       "password": "saikumar123",
       "mobileNumber": 9900990099,
-      "role":"USER",
+      "role": "USER",
       "id": 6
     },
     {
@@ -53,7 +53,7 @@
       "email": "",
       "password": "",
       "mobileNumber": "",
-      "role":"USER",
+      "role": "USER",
       "id": 7
     },
     {
@@ -61,7 +61,7 @@
       "email": "kumar",
       "password": "saikumar@123",
       "mobileNumber": 9900011112,
-      "role":"USER",
+      "role": "USER",
       "id": 8
     },
     {
@@ -69,7 +69,7 @@
       "email": "john@gmail.com",
       "password": "1234",
       "mobileNumber": 9900990099,
-      "role":"USER",
+      "role": "USER",
       "id": 9
     },
     {
@@ -77,7 +77,7 @@
       "email": "kiran@gmail.com",
       "password": "As01224",
       "mobileNumber": 9900990099,
-      "role":"USER",
+      "role": "USER",
       "id": 10
     },
     {
@@ -85,8 +85,49 @@
       "email": "sai@gmail.com",
       "password": "sai",
       "mobileNumber": 91111111111,
-      "role":"USER",
+      "role": "USER",
       "id": 11
+    }
+  ],
+  "jobs": [
+    {
+      "id": 1,
+      "jobTitle": "Angular Developer in Hyderbad",
+      "experience": "3-4 exp",
+      "package": "9-10 LPA",
+      "companyName": "TCS",
+      "companyLogo": "https://www.siegelgale.com/app/uploads/2021/10/SGCOM_Blog_211018.png",
+      "description": "Anguar Developer Location in Hyderbad Having Overall 3-4 Exp",
+      "locations": [
+        "Hyderabad",
+        "Banglore",
+        "Chennai"
+      ],
+      "isActive": true,
+      "createdDate": null,
+      "updatedDate": null,
+      "jobDescription": ""
+    },
+    {
+      "jobTitle": "Manual Tester",
+      "experience": "4",
+      "package": "10-20 LPA",
+      "companyName": "TCS",
+      "companyLogo": "https://www.siegelgale.com/app/uploads/2021/10/SGCOM_Blog_211018.png",
+      "description": "Formulate software testing strategies\nReview business / software requirements /development documentation and provide inputs.\nPrepare test plans.\nAnalyze test results and test metrics.\nPrepare test reports.",
+      "locations": [
+        {
+          "locationName": "Hyderbad"
+        },
+        {
+          "locationName": "Banglore"
+        }
+      ],
+      "isActive": true,
+      "createdDate": "2023-09-20T04:35:38.602Z",
+      "updatedDate": "",
+      "jobDescription": " Preferred Technology skills : Java, JEE, Web technologies (Javascript,HTML5,CSS,GWT),Web Services/Rest API, Reports, BRMS and Oracle/DB2 database.\n2. Software Estimation skills\n3. Communication Presentation Skills for engaging stakeholders\n4. Analysis and Consulting skills",
+      "id": 2
     }
   ]
 }

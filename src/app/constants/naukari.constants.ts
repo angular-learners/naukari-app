@@ -11,4 +11,5 @@ export class NaukariConstants{
   static  MAX_LENGTH:string="maxlength should be 10";
   static  LOGIN_SUCCESS:string="Your Loggedin Successfully";
   static  LOGIN_FAILURE:string="Login failed please check username/password!";
+  static JOB_CREATED:string="Job Created Successfully";
 }
