@@ -1,10 +1,10 @@
 <div class="container">
     <form [formGroup]="addEditJobForm"  (ngSubmit)="saveJob()">
-        <div class="alert alert success" *ngIf="sharedService.message">
+        <div class="alert alert-success" *ngIf="sharedService.message">
               {{sharedService.message}}
         </div>
         <div class="card p-3">
-            <h1>Create Job</h1>
+            <h1>{{jobId?'Update':'Create'}} Job</h1>
             <div class="card-body">
                 <div class="form-group">
                     <label for="jobTitle">Job Title</label>
@@ -76,7 +76,7 @@
                 </div>
             </div>
             <div class="card-footer">
-                <button type="submit" class="btn btn-primary">SAVE</button>
+                <button type="submit" class="btn btn-primary">{{jobId?'UPDATE':'SAVE'}}</button>
             </div>
         </div>
     </form>

@@ -16,4 +16,13 @@ export class JobsService {
   updateJob(jobPayload:any,id:number):Observable<any>{
     return this.http.put(`${this.BASE_URL}/${id}`, jobPayload);
   }
+
+  getJobById(id:number):Observable<any>{
+    return this.http.get(`${this.BASE_URL}/${id}`);
+  }
+
+  getAllJobs():Observable<any>{
+    return this.http.get(this.BASE_URL);
+  }
 }
+

@@ -1,1 +1,26 @@
-<p>view-jobs works!</p>
+<div class="container">
+    <div class="card mb-2 w-50" *ngFor="let item of jobsList" (click)="editJob(item.id)">
+        <div class="card-body" >
+            <div class="d-flex justify-content-between">
+                <div>
+                    <h4>{{item.jobTitle}}</h4>
+                    <h5>{{item.companyName}}</h5>
+                </div>
+                <div>
+                    <img src="{{item.companyLogo}}" alt="" width="50" height="50">
+                </div>
+            </div>
+            <div>
+                <span>
+                    {{item.experience}}
+                </span>
+                <span *ngFor="let location of item.locations">
+                 {{location.locationName}} ,
+                </span>
+            </div>
+            <div>
+                java c++ python 
+            </div>
+        </div>
+    </div>
+</div>

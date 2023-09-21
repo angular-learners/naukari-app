@@ -12,4 +12,6 @@ export class NaukariConstants{
   static  LOGIN_SUCCESS:string="Your Loggedin Successfully";
   static  LOGIN_FAILURE:string="Login failed please check username/password!";
   static JOB_CREATED:string="Job Created Successfully";
+  static JOB_UPDATED:string="Job Updated Successfully";
+
 }

@@ -99,9 +99,15 @@
       "companyLogo": "https://www.siegelgale.com/app/uploads/2021/10/SGCOM_Blog_211018.png",
       "description": "Anguar Developer Location in Hyderbad Having Overall 3-4 Exp",
       "locations": [
-        "Hyderabad",
-        "Banglore",
-        "Chennai"
+        {
+          "locationName": "Hyderbad"
+        },
+        {
+          "locationName": "Banglore"
+        },
+        {
+          "locationName": "Trivandram"
+        }
       ],
       "isActive": true,
       "createdDate": null,
@@ -109,25 +115,162 @@
       "jobDescription": ""
     },
     {
-      "jobTitle": "Manual Tester",
-      "experience": "4",
-      "package": "10-20 LPA",
-      "companyName": "TCS",
-      "companyLogo": "https://www.siegelgale.com/app/uploads/2021/10/SGCOM_Blog_211018.png",
-      "description": "Formulate software testing strategies\nReview business / software requirements /development documentation and provide inputs.\nPrepare test plans.\nAnalyze test results and test metrics.\nPrepare test reports.",
+      "jobTitle": "Manual Tester Engineer",
+      "experience": "3",
+      "package": [
+        [
+          [
+            "10-20 LPA"
+          ]
+        ]
+      ],
+      "companyName": [
+        [
+          [
+            "TCS"
+          ]
+        ]
+      ],
+      "companyLogo": [
+        [
+          [
+            "https://www.siegelgale.com/app/uploads/2021/10/SGCOM_Blog_211018.png"
+          ]
+        ]
+      ],
+      "description": [
+        [
+          [
+            "Formulate software testing strategies\nReview business / software requirements /development documentation and provide inputs.\nPrepare test plans.\nAnalyze test results and test metrics.\nPrepare test reports."
+          ]
+        ]
+      ],
       "locations": [
         {
           "locationName": "Hyderbad"
         },
         {
-          "locationName": "Banglore"
+          "locationName": "Chennai"
+        },
+        {
+          "locationName": "Kolkatha"
+        },
+        {
+          "locationName": "Delhi"
+        },
+        {
+          "locationName": "Mumbai"
         }
       ],
-      "isActive": true,
-      "createdDate": "2023-09-20T04:35:38.602Z",
-      "updatedDate": "",
-      "jobDescription": " Preferred Technology skills : Java, JEE, Web technologies (Javascript,HTML5,CSS,GWT),Web Services/Rest API, Reports, BRMS and Oracle/DB2 database.\n2. Software Estimation skills\n3. Communication Presentation Skills for engaging stakeholders\n4. Analysis and Consulting skills",
+      "isActive": [
+        [
+          [
+            true
+          ]
+        ]
+      ],
+      "createdDate": "",
+      "updatedDate": [
+        "2023-09-21T04:30:52.742Z"
+      ],
+      "jobDescription": [
+        [
+          [
+            " Preferred Technology skills : Java, JEE, Web technologies (Javascript,HTML5,CSS,GWT),Web Services/Rest API, Reports, BRMS and Oracle/DB2 database.\n2. Software Estimation skills\n3. Communication Presentation Skills for engaging stakeholders\n4. Analysis and Consulting skills"
+          ]
+        ]
+      ],
       "id": 2
+    },
+    {
+      "jobTitle": [
+        "Angular Developer"
+      ],
+      "experience": [
+        "2"
+      ],
+      "package": [
+        "5-7 LPA"
+      ],
+      "companyName": [
+        "Capjemini"
+      ],
+      "companyLogo": [
+        "https://1000logos.net/wp-content/uploads/2021/08/Capgemini-Logo.jpg"
+      ],
+      "description": [
+        "Strong in Angular 12 and above, NodeJS, BitBucket, JIRA and Jenkins\nCore Java - in depth knowledge\nExpertise in Object Oriented Design & Analysis, application design patterns\nMust possess strong understanding and experience in TypeScript, validations, Forms, Bootstrap, JSON\nExperience with HTML5, CSS3, JQuery and JavaScript.\nExperience with Tomcat, WebSphere application server\nShould have excellent analytical & problem solving skills."
+      ],
+      "locations": [
+        {
+          "locationName": "Hyderbad"
+        },
+        {
+          "locationName": "Dubai"
+        },
+        {
+          "locationName": "USA"
+        },
+        {
+          "locationName": "Chennai"
+        }
+      ],
+      "isActive": false,
+      "createdDate": "",
+      "updatedDate": [
+        "2023-09-21T04:34:40.095Z"
+      ],
+      "jobDescription": [
+        "Strong in Angular 12 and above, NodeJS, BitBucket, JIRA and Jenkins\nCore Java - in depth knowledge\nExpertise in Object Oriented Design & Analysis, application design patterns\nMust possess strong understanding and experience in TypeScript, validations, Forms, Bootstrap, JSON\nExperience with HTML5, CSS3, JQuery and JavaScript.\nExperience with Tomcat, WebSphere application server\nShould have excellent analytical & problem solving skills."
+      ],
+      "id": 3
+    },
+    {
+      "jobTitle": "Java Developer ,SpringBoot Developer",
+      "experience": "4",
+      "package": [
+        "10-20 LPA"
+      ],
+      "companyName": [
+        "IBM"
+      ],
+      "companyLogo": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/IBM_logo.svg/1200px-IBM_logo.svg.png"
+      ],
+      "description": [
+        "Position Name : Consulting JAVA Developer\nExperience : 3 to 5+ Yrs\nLocation : Chennai/Bangalore/Hyderabad\nPrimary Skills: Core JAVA, JAVA J2EE, Spring, Hibernate, MicroServices, JQuery, AJAX\nSecondary Skills : Spring JPA, JavaScript"
+      ],
+      "locations": [
+        {
+          "locationName": "Hyderbad"
+        },
+        {
+          "locationName": "Chennai"
+        },
+        {
+          "locationName": "Banglore"
+        },
+        {
+          "locationName": "Pune"
+        },
+        {
+          "locationName": "Trivindram"
+        },
+        {
+          "locationName": "Mysore"
+        }
+      ],
+      "isActive": [
+        true
+      ],
+      "createdDate": "",
+      "updatedDate": [
+        "2023-09-21T04:48:17.221Z"
+      ],
+      "jobDescription": [
+        "Position Name : Consulting JAVA Developer\nExperience : 3 to 5+ Yrs\nLocation : Chennai/Bangalore/Hyderabad\nPrimary Skills: Core JAVA, JAVA J2EE, Spring, Hibernate, MicroServices, JQuery, AJAX\nSecondary Skills : Spring JPA, JavaScript"
+      ],
+      "id": 4
     }
   ]
 }

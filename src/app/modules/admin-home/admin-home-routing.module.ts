@@ -9,6 +9,7 @@ const routes: Routes = [
     path:'admin-home',component:AdminHomeComponent,
     children:[
        {path:'add-edit-jobs',component:AddEditJobComponent},
+       {path:'add-edit-jobs/:id',component:AddEditJobComponent},
        {path:'view-jobs',component:ViewJobsComponent}
     ]
   }
