@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { AdminHomeRoutingModule } from './admin-home-routing.module';
 import { AdminHomeComponent } from './admin-home.component';
 import { ViewJobsComponent } from './view-jobs/view-jobs.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { ViewJobsComponent } from './view-jobs/view-jobs.component';
   ],
   imports: [
     CommonModule,
-    AdminHomeRoutingModule
+    AdminHomeRoutingModule,
+    FormsModule
   ]
 })
 export class AdminHomeModule { }

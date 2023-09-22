@@ -93,7 +93,7 @@
     {
       "id": 1,
       "jobTitle": "Angular Developer in Hyderbad",
-      "experience": "3-4 exp",
+      "experience": "3",
       "package": "9-10 LPA",
       "companyName": "TCS",
       "companyLogo": "https://www.siegelgale.com/app/uploads/2021/10/SGCOM_Blog_211018.png",
@@ -271,6 +271,41 @@
         "Position Name : Consulting JAVA Developer\nExperience : 3 to 5+ Yrs\nLocation : Chennai/Bangalore/Hyderabad\nPrimary Skills: Core JAVA, JAVA J2EE, Spring, Hibernate, MicroServices, JQuery, AJAX\nSecondary Skills : Spring JPA, JavaScript"
       ],
       "id": 4
+    },
+    {
+      "jobTitle": "Web Developer",
+      "experience": "4",
+      "package": "10-20 LPA",
+      "companyName": "Virtuusa",
+      "companyLogo": "https://images.crunchbase.com/image/upload/c_lpad,f_auto,q_auto:eco,dpr_1/px8dkptpqet9hrjqupqc",
+      "description": "Create website layout/user interface by using standard HTML/CSS practices\nCooperate with web designers to match visual design intent\nStay plugged into emerging technologies/industry trends and apply them to operations and activities\nAble to develop ideas and processes and clearly express them\n",
+      "locations": [
+        {
+          "locationName": "Hyderbad"
+        },
+        {
+          "locationName": "Chennai"
+        },
+        {
+          "locationName": "Banglore"
+        }
+      ],
+      "isActive": true,
+      "createdDate": "2023-09-22T03:10:54.137Z",
+      "updatedDate": "",
+      "jobDescription": "Create website layout/user interface by using standard HTML/CSS practices\nCooperate with web designers to match visual design intent\nStay plugged into emerging technologies/industry trends and apply them to operations and activities\nAble to develop ideas and processes and clearly express them\n",
+      "technologies": [
+        {
+          "techName": "Java"
+        },
+        {
+          "techName": "Python"
+        },
+        {
+          "techName": "Angular"
+        }
+      ],
+      "id": 5
     }
   ]
 }

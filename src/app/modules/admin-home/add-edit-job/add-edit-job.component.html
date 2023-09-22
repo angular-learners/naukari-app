@@ -60,7 +60,23 @@
                             </div>
                         </div>
                     </div>
-                  
+                </div>
+
+                <div class="form-group">
+                    <label for="technologies">Technologies</label>
+                    <button type="button"  class="btn btn-secondary"  (click)="addTechnology()" style="margin-left: 128px;">
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                    <div formArrayName="technologies">
+                        <div *ngFor="let item of getTechnologies.controls;let index=index">
+                             <div [formGroupName]="index" class="d-flex my-2">
+                                 <div><input type="text" name="techName" id="techName" formControlName="techName" class="form-control"></div>
+                                 <div *ngIf="index>0"><button type="button" (click)="removeTechnology(index)" class="btn btn-danger mx-3 "><i class="fa-regular fa-trash-can"></i></button></div>
+                             </div>
+                        </div>
+
+                    </div>
+
                 </div>
 
                 <div class="form-group mt-2">

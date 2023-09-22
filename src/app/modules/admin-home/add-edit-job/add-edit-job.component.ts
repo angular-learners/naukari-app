@@ -19,7 +19,7 @@ export class AddEditJobComponent implements OnInit {
     private jobService: JobsService,
     public sharedService: SharedService,
     private route: ActivatedRoute,
-    private router:Router
+    private router: Router
   ) {
     this.jobId = Number(this.route.snapshot.paramMap.get('id'));
   }
@@ -48,8 +48,37 @@ export class AddEditJobComponent implements OnInit {
       createdDate: [''],
       updatedDate: [''],
       jobDescription: [''],
+      technologies: this.fb.array([
+        this.fb.group({
+          techName: ['']
+        })
+      ])
     });
   }
+
+  get getTechnologies(): FormArray<any> {
+    return this.addEditJobForm.get('technologies') as FormArray;
+  }
+
+  addNewTechnology(): FormGroup {
+    return this.fb.group({
+      techName: ['']
+    })
+  }
+
+  addTechnology(){
+    this.getTechnologies.push(this.addNewTechnology());
+  }
+
+  removeTechnology(index:number){
+    this.getTechnologies.removeAt(index);
+  }
+
+
+
+
+
+
 
   get getLocations(): FormArray {
     return this.addEditJobForm.get('locations') as FormArray;
@@ -70,21 +99,21 @@ export class AddEditJobComponent implements OnInit {
   }
 
   saveJob() {
-    if(this.jobId){
-      this.jobService.updateJob(this.addEditJobForm.value,this.jobId).subscribe({
+    if (this.jobId) {
+      this.jobService.updateJob(this.addEditJobForm.value, this.jobId).subscribe({
         next: (res: any) => {
           console.log(res);
           this.sharedService.message = NaukariConstants.JOB_UPDATED;
 
-          setTimeout(()=>{
-             this.router.navigate(['admin-home/view-jobs'])
-          },3000)
+          setTimeout(() => {
+            this.router.navigate(['admin-home/view-jobs'])
+          }, 3000)
         },
         error: (err: any) => {
           console.log(err);
         },
       });
-    }else{
+    } else {
       this.addEditJobForm.get('createdDate')?.setValue(new Date());
       this.jobService.createJob(this.addEditJobForm.value).subscribe({
         next: (res: any) => {
@@ -112,19 +141,35 @@ export class AddEditJobComponent implements OnInit {
       isActive: [isActive],
       updatedDate: [new Date()],
       jobDescription: [jobDescription],
+      technologies:[this.patchTechnlogies(edit)]
     })
   }
 
+  patchTechnlogies(res:any){
+    const techArray=this.addEditJobForm.get('technologies') as FormArray;
+
+    while(techArray.length<res.technologies.length){
+        techArray.push(this.addNewTechnology());
+    }
+      
+    res.technologies.forEach((element:any,index:any) => {
+       const techControl=techArray.at(index);
+        if(techControl){
+          techControl.get('techName')?.patchValue(element.techName);
+        }
+    });
+
+  }
 
 
   patchLocations(res: any) {
     const locationsArray = this.addEditJobForm.get('locations') as FormArray;
-    
+
     // Ensure that the FormArray has enough controls
     while (locationsArray.length < res.locations.length) {
       locationsArray.push(this.addNewLocation());
     }
-  
+
     // Patch values from res.locations to the corresponding controls
     res.locations.forEach((element: any, index: number) => {
       const locationControl = locationsArray.at(index);
@@ -133,8 +178,8 @@ export class AddEditJobComponent implements OnInit {
       }
     });
   }
-  
-  
+
+
   getJob() {
     this.jobService.getJobById(this.jobId).subscribe(
       {

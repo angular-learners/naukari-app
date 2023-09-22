@@ -1,26 +1,37 @@
-<div class="container">
-    <div class="card mb-2 w-50" *ngFor="let item of jobsList" (click)="editJob(item.id)">
-        <div class="card-body" >
-            <div class="d-flex justify-content-between">
-                <div>
-                    <h4>{{item.jobTitle}}</h4>
-                    <h5>{{item.companyName}}</h5>
+<div class="row">
+    <div class="container col-md-9">
+        <input type="search" class="form-control mb-5" placeholder="enter job title" (keyup)="searchJobs($event)">
+
+        <div class="card mb-2 w-50" *ngFor="let item of filterJobs" (click)="editJob(item.id)">
+            <div class="card-body" >
+                <div class="d-flex justify-content-between">
+                    <div>
+                        <h4>{{item.jobTitle}}</h4>
+                        <h5>{{item.companyName}}</h5>
+                    </div>
+                    <div>
+                        <img src="{{item.companyLogo}}" alt="" width="50" height="50">
+                    </div>
                 </div>
                 <div>
-                    <img src="{{item.companyLogo}}" alt="" width="50" height="50">
+                    <span>
+                        {{item.experience}}
+                    </span>
+                    <span *ngFor="let location of item.locations">
+                     {{location.locationName}} ,
+                    </span>
                 </div>
-            </div>
-            <div>
-                <span>
-                    {{item.experience}}
+                <span *ngFor="let tech of item.technologies">
+                      {{tech.techName}}  ,
                 </span>
-                <span *ngFor="let location of item.locations">
-                 {{location.locationName}} ,
-                </span>
-            </div>
-            <div>
-                java c++ python 
             </div>
         </div>
+    </div>
+    <div class="container col-md-3">
+            <div *ngFor="let item of expList;let index=index">
+               {{item.exp}} <input type="checkbox" [(ngModel)]="item.checked" (change)="expChange(item.exp,item.checked)">
+               {{item.checked}}
+            </div>
+            
     </div>
 </div>
